@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03A73D49263F90A200A25195 /* Smart Hommie WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 03A73D48263F90A200A25195 /* Smart Hommie WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		03A73D4E263F90A500A25195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A73D4D263F90A500A25195 /* Assets.xcassets */; };
+		03A73D55263F90A500A25195 /* Smart Hommie WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 03A73D54263F90A500A25195 /* Smart Hommie WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		03A73D5A263F90A500A25195 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A73D59263F90A500A25195 /* ContentView.swift */; };
+		03A73D5C263F90A500A25195 /* Smart_HommieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A73D5B263F90A500A25195 /* Smart_HommieApp.swift */; };
+		03A73D5E263F90A500A25195 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A73D5D263F90A500A25195 /* ComplicationController.swift */; };
+		03A73D60263F90A600A25195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A73D5F263F90A600A25195 /* Assets.xcassets */; };
+		03A73D63263F90A600A25195 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A73D62263F90A600A25195 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03A73D4A263F90A200A25195 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03A73D3E263F90A200A25195 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03A73D47263F90A200A25195;
+			remoteInfo = "Smart Hommie WatchKit App";
+		};
+		03A73D56263F90A500A25195 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03A73D3E263F90A200A25195 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03A73D53263F90A500A25195;
+			remoteInfo = "Smart Hommie WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03A73D6A263F90A600A25195 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				03A73D55263F90A500A25195 /* Smart Hommie WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A73D6E263F90A600A25195 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				03A73D49263F90A200A25195 /* Smart Hommie WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		03A73D44263F90A200A25195 /* Smart Hommie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Hommie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03A73D48263F90A200A25195 /* Smart Hommie WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Hommie WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03A73D4D263F90A500A25195 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03A73D4F263F90A500A25195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03A73D54263F90A500A25195 /* Smart Hommie WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Smart Hommie WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03A73D59263F90A500A25195 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		03A73D5B263F90A500A25195 /* Smart_HommieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_HommieApp.swift; sourceTree = "<group>"; };
+		03A73D5D263F90A500A25195 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		03A73D5F263F90A600A25195 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03A73D62263F90A600A25195 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		03A73D64263F90A600A25195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03A73D51263F90A500A25195 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03A73D3D263F90A200A25195 = {
+			isa = PBXGroup;
+			children = (
+				03A73D4C263F90A200A25195 /* Smart Hommie WatchKit App */,
+				03A73D58263F90A500A25195 /* Smart Hommie WatchKit Extension */,
+				03A73D45263F90A200A25195 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03A73D45263F90A200A25195 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03A73D44263F90A200A25195 /* Smart Hommie.app */,
+				03A73D48263F90A200A25195 /* Smart Hommie WatchKit App.app */,
+				03A73D54263F90A500A25195 /* Smart Hommie WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03A73D4C263F90A200A25195 /* Smart Hommie WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				03A73D4D263F90A500A25195 /* Assets.xcassets */,
+				03A73D4F263F90A500A25195 /* Info.plist */,
+			);
+			path = "Smart Hommie WatchKit App";
+			sourceTree = "<group>";
+		};
+		03A73D58263F90A500A25195 /* Smart Hommie WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				03A73D59263F90A500A25195 /* ContentView.swift */,
+				03A73D5B263F90A500A25195 /* Smart_HommieApp.swift */,
+				03A73D5D263F90A500A25195 /* ComplicationController.swift */,
+				03A73D5F263F90A600A25195 /* Assets.xcassets */,
+				03A73D64263F90A600A25195 /* Info.plist */,
+				03A73D61263F90A600A25195 /* Preview Content */,
+			);
+			path = "Smart Hommie WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		03A73D61263F90A600A25195 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				03A73D62263F90A600A25195 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03A73D43263F90A200A25195 /* Smart Hommie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03A73D6F263F90A600A25195 /* Build configuration list for PBXNativeTarget "Smart Hommie" */;
+			buildPhases = (
+				03A73D42263F90A200A25195 /* Resources */,
+				03A73D6E263F90A600A25195 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03A73D4B263F90A200A25195 /* PBXTargetDependency */,
+			);
+			name = "Smart Hommie";
+			productName = "Smart Hommie";
+			productReference = 03A73D44263F90A200A25195 /* Smart Hommie.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		03A73D47263F90A200A25195 /* Smart Hommie WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03A73D6B263F90A600A25195 /* Build configuration list for PBXNativeTarget "Smart Hommie WatchKit App" */;
+			buildPhases = (
+				03A73D46263F90A200A25195 /* Resources */,
+				03A73D6A263F90A600A25195 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03A73D57263F90A500A25195 /* PBXTargetDependency */,
+			);
+			name = "Smart Hommie WatchKit App";
+			productName = "Smart Hommie WatchKit App";
+			productReference = 03A73D48263F90A200A25195 /* Smart Hommie WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		03A73D53263F90A500A25195 /* Smart Hommie WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03A73D67263F90A600A25195 /* Build configuration list for PBXNativeTarget "Smart Hommie WatchKit Extension" */;
+			buildPhases = (
+				03A73D50263F90A500A25195 /* Sources */,
+				03A73D51263F90A500A25195 /* Frameworks */,
+				03A73D52263F90A500A25195 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Smart Hommie WatchKit Extension";
+			productName = "Smart Hommie WatchKit Extension";
+			productReference = 03A73D54263F90A500A25195 /* Smart Hommie WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03A73D3E263F90A200A25195 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					03A73D43263F90A200A25195 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					03A73D47263F90A200A25195 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					03A73D53263F90A500A25195 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 03A73D41263F90A200A25195 /* Build configuration list for PBXProject "Smart Hommie" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03A73D3D263F90A200A25195;
+			productRefGroup = 03A73D45263F90A200A25195 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03A73D43263F90A200A25195 /* Smart Hommie */,
+				03A73D47263F90A200A25195 /* Smart Hommie WatchKit App */,
+				03A73D53263F90A500A25195 /* Smart Hommie WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03A73D42263F90A200A25195 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A73D46263F90A200A25195 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03A73D4E263F90A500A25195 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A73D52263F90A500A25195 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03A73D63263F90A600A25195 /* Preview Assets.xcassets in Resources */,
+				03A73D60263F90A600A25195 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03A73D50263F90A500A25195 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03A73D5C263F90A500A25195 /* Smart_HommieApp.swift in Sources */,
+				03A73D5A263F90A500A25195 /* ContentView.swift in Sources */,
+				03A73D5E263F90A500A25195 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03A73D4B263F90A200A25195 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03A73D47263F90A200A25195 /* Smart Hommie WatchKit App */;
+			targetProxy = 03A73D4A263F90A200A25195 /* PBXContainerItemProxy */;
+		};
+		03A73D57263F90A500A25195 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03A73D53263F90A500A25195 /* Smart Hommie WatchKit Extension */;
+			targetProxy = 03A73D56263F90A500A25195 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03A73D65263F90A600A25195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		03A73D66263F90A600A25195 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03A73D68263F90A600A25195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Smart Hommie WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 96YN6B6A4P;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Smart Hommie WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fotonical.Smart-Hommie.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		03A73D69263F90A600A25195 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Smart Hommie WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 96YN6B6A4P;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Smart Hommie WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fotonical.Smart-Hommie.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		03A73D6C263F90A600A25195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 96YN6B6A4P;
+				IBSC_MODULE = Smart_Hommie_WatchKit_Extension;
+				INFOPLIST_FILE = "Smart Hommie WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "fotonical.Smart-Hommie.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		03A73D6D263F90A600A25195 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 96YN6B6A4P;
+				IBSC_MODULE = Smart_Hommie_WatchKit_Extension;
+				INFOPLIST_FILE = "Smart Hommie WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "fotonical.Smart-Hommie.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		03A73D70263F90A600A25195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96YN6B6A4P;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fotonical.Smart-Hommie";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		03A73D71263F90A600A25195 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96YN6B6A4P;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fotonical.Smart-Hommie";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03A73D41263F90A200A25195 /* Build configuration list for PBXProject "Smart Hommie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03A73D65263F90A600A25195 /* Debug */,
+				03A73D66263F90A600A25195 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03A73D67263F90A600A25195 /* Build configuration list for PBXNativeTarget "Smart Hommie WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03A73D68263F90A600A25195 /* Debug */,
+				03A73D69263F90A600A25195 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03A73D6B263F90A600A25195 /* Build configuration list for PBXNativeTarget "Smart Hommie WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03A73D6C263F90A600A25195 /* Debug */,
+				03A73D6D263F90A600A25195 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03A73D6F263F90A600A25195 /* Build configuration list for PBXNativeTarget "Smart Hommie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03A73D70263F90A600A25195 /* Debug */,
+				03A73D71263F90A600A25195 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03A73D3E263F90A200A25195 /* Project object */;
+}
