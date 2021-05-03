@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,15 @@
 		03A73D5E263F90A500A25195 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A73D5D263F90A500A25195 /* ComplicationController.swift */; };
 		03A73D60263F90A600A25195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A73D5F263F90A600A25195 /* Assets.xcassets */; };
 		03A73D63263F90A600A25195 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A73D62263F90A600A25195 /* Preview Assets.xcassets */; };
+		03A73D76263F964A00A25195 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03A73D75263F964A00A25195 /* GoogleService-Info.plist */; };
+		03A73DA0263F9CBF00A25195 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 03A73D9F263F9CBF00A25195 /* FirebaseAuth */; };
+		03A73DA2263F9CBF00A25195 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 03A73DA1263F9CBF00A25195 /* FirebaseDatabase */; };
+		03A73DA5263FA1AA00A25195 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A73DA4263FA1AA00A25195 /* Sensor.swift */; };
+		03A73DA7263FA22800A25195 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A73DA6263FA22800A25195 /* Location.swift */; };
+		03A73DAB263FA39500A25195 /* SensorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A73DAA263FA39500A25195 /* SensorViewModel.swift */; };
+		03A73DAD263FA47600A25195 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A73DAC263FA47600A25195 /* LocationView.swift */; };
+		03A73DAF263FA49600A25195 /* SensorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A73DAE263FA49600A25195 /* SensorView.swift */; };
+		03A73DB22640167600A25195 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A73DB12640167600A25195 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +80,13 @@
 		03A73D5F263F90A600A25195 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03A73D62263F90A600A25195 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03A73D64263F90A600A25195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03A73D75263F964A00A25195 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		03A73DA4263FA1AA00A25195 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		03A73DA6263FA22800A25195 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		03A73DAA263FA39500A25195 /* SensorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewModel.swift; sourceTree = "<group>"; };
+		03A73DAC263FA47600A25195 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		03A73DAE263FA49600A25195 /* SensorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorView.swift; sourceTree = "<group>"; };
+		03A73DB12640167600A25195 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A73DA2263F9CBF00A25195 /* FirebaseDatabase in Frameworks */,
+				03A73DA0263F9CBF00A25195 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +108,7 @@
 				03A73D4C263F90A200A25195 /* Smart Hommie WatchKit App */,
 				03A73D58263F90A500A25195 /* Smart Hommie WatchKit Extension */,
 				03A73D45263F90A200A25195 /* Products */,
+				03A73D77263F981700A25195 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +134,11 @@
 		03A73D58263F90A500A25195 /* Smart Hommie WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				03A73DB02640166A00A25195 /* Utils */,
+				03A73DA9263FA35700A25195 /* ViewModel */,
+				03A73DA8263FA35000A25195 /* View */,
+				03A73DA3263FA17800A25195 /* Model */,
+				03A73D75263F964A00A25195 /* GoogleService-Info.plist */,
 				03A73D59263F90A500A25195 /* ContentView.swift */,
 				03A73D5B263F90A500A25195 /* Smart_HommieApp.swift */,
 				03A73D5D263F90A500A25195 /* ComplicationController.swift */,
@@ -133,6 +157,47 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		03A73D77263F981700A25195 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03A73DA3263FA17800A25195 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03A73DA4263FA1AA00A25195 /* Sensor.swift */,
+				03A73DA6263FA22800A25195 /* Location.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03A73DA8263FA35000A25195 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03A73DAC263FA47600A25195 /* LocationView.swift */,
+				03A73DAE263FA49600A25195 /* SensorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03A73DA9263FA35700A25195 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				03A73DAA263FA39500A25195 /* SensorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		03A73DB02640166A00A25195 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				03A73DB12640167600A25195 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +214,8 @@
 				03A73D4B263F90A200A25195 /* PBXTargetDependency */,
 			);
 			name = "Smart Hommie";
+			packageProductDependencies = (
+			);
 			productName = "Smart Hommie";
 			productReference = 03A73D44263F90A200A25195 /* Smart Hommie.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
@@ -183,6 +250,10 @@
 			dependencies = (
 			);
 			name = "Smart Hommie WatchKit Extension";
+			packageProductDependencies = (
+				03A73D9F263F9CBF00A25195 /* FirebaseAuth */,
+				03A73DA1263F9CBF00A25195 /* FirebaseDatabase */,
+			);
 			productName = "Smart Hommie WatchKit Extension";
 			productReference = 03A73D54263F90A500A25195 /* Smart Hommie WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -216,6 +287,9 @@
 				Base,
 			);
 			mainGroup = 03A73D3D263F90A200A25195;
+			packageReferences = (
+				03A73D9E263F9CBF00A25195 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 03A73D45263F90A200A25195 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -249,6 +323,7 @@
 			files = (
 				03A73D63263F90A600A25195 /* Preview Assets.xcassets in Resources */,
 				03A73D60263F90A600A25195 /* Assets.xcassets in Resources */,
+				03A73D76263F964A00A25195 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +335,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				03A73D5C263F90A500A25195 /* Smart_HommieApp.swift in Sources */,
+				03A73DAF263FA49600A25195 /* SensorView.swift in Sources */,
+				03A73DA5263FA1AA00A25195 /* Sensor.swift in Sources */,
+				03A73DA7263FA22800A25195 /* Location.swift in Sources */,
+				03A73DAD263FA47600A25195 /* LocationView.swift in Sources */,
 				03A73D5A263F90A500A25195 /* ContentView.swift in Sources */,
+				03A73DAB263FA39500A25195 /* SensorViewModel.swift in Sources */,
 				03A73D5E263F90A500A25195 /* ComplicationController.swift in Sources */,
+				03A73DB22640167600A25195 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +630,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03A73D9E263F9CBF00A25195 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03A73D9F263F9CBF00A25195 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03A73D9E263F9CBF00A25195 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		03A73DA1263F9CBF00A25195 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03A73D9E263F9CBF00A25195 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 03A73D3E263F90A200A25195 /* Project object */;
 }
