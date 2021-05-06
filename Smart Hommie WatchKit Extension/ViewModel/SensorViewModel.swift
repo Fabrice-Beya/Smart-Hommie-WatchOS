@@ -11,12 +11,17 @@ import Firebase
 class SensorsViewModel: ObservableObject {
     static let shared = SensorsViewModel()
 
-    @Published var locations: [Location] = [Location(name: "Living Room", sensors: []),
-                                            Location(name: "Main Bedroom", sensors: []),
-                                            Location(name: "Bathroom", sensors: []),
-                                            Location(name: "Office Space", sensors: [])]
+    @Published var locations: [Location] = []
+    
+//    @Published var location = MockLocations
+    
+    @Published var selectedLocation: Location = Location()
+    @Published var selectedSensor: Sensor = Sensor()
     
     @Published var isBusy = false
+    
+    @Published var showSensorView = false
+    @Published var showLocationView = false
     
     init(){
         fetchSensors()
@@ -25,73 +30,48 @@ class SensorsViewModel: ObservableObject {
     func fetchSensors(){
         isBusy = true
         
-        REF_LIVING_ROOM.observeSingleEvent(of: .value) { [self]snapshot in
+        DB_REF.observe(DataEventType.value, with: { snapshot in
             if !snapshot.exists() {
                 self.isBusy = false
                 return
             }
-            
-            guard let dictionary = snapshot.value as? [String: AnyObject] else { return }
-            
-            for (key, value) in dictionary {
-                let sensorDictionary = value as? [String: Any] ?? [:]
+
+            guard let locationsArrayDictionary = snapshot.value as? [String: AnyObject] else { return }
+           
+            var locs: [Location] = []
+
+            for (key, value) in locationsArrayDictionary {
                 
-                let sensorObject = Sensor(dictionary: sensorDictionary)
-                self.locations[0].sensors.append(sensorObject)
+                let sensorArrayDictionary = value as? [String: Any] ?? [:]
                 
-            }
-        }
-        
-        REF_MAIN_BEDROOM.observeSingleEvent(of: .value) { [self]snapshot in
-            if !snapshot.exists() {
-                self.isBusy = false
-                return
-            }
-            
-            guard let dictionary = snapshot.value as? [String: AnyObject] else { return }
-            
-            for (key, value) in dictionary {
-                let sensorDictionary = value as? [String: Any] ?? [:]
+                var sensors: [Sensor] = []
                 
-                let sensorObject = Sensor(dictionary: sensorDictionary)
-                self.locations[1].sensors.append(sensorObject)
+                for (_, value) in sensorArrayDictionary {
+                    let sensorDictionary = value as? [String: Any] ?? [:]
+    
+                    let sensorObject = Sensor(dictionary: sensorDictionary)
+                    sensors.append(sensorObject)
+    
+                    if sensorObject.name + sensorObject.deviceuid == self.selectedSensor.name + self.selectedSensor.deviceuid {
+                        self.selectedSensor = sensorObject
+                    }
+                }
                 
-            }
-        }
-        
-        REF_LIVING_ROOM.observeSingleEvent(of: .value) { [self]snapshot in
-            if !snapshot.exists() {
-                self.isBusy = false
-                return
-            }
-            
-            guard let dictionary = snapshot.value as? [String: AnyObject] else { return }
-            
-            for (key, value) in dictionary {
-                let sensorDictionary = value as? [String: Any] ?? [:]
+                if self.selectedLocation.name == key {
+                    self.selectedLocation.sensors = sensors.uniqued()
+                    
+                    
+                }
                 
-                let sensorObject = Sensor(dictionary: sensorDictionary)
-                self.locations[2].sensors.append(sensorObject)
+                locs.append(Location(name: key, sensors: sensors.uniqued()))
                 
             }
-        }
-        
-        REF_BATHROOM.observeSingleEvent(of: .value) { [self]snapshot in
-            if !snapshot.exists() {
-                self.isBusy = false
-                return
-            }
+
+            self.locations  = locs.uniqued()
             
-            guard let dictionary = snapshot.value as? [String: AnyObject] else { return }
+            self.isBusy = false
             
-            for (key, value) in dictionary {
-                let sensorDictionary = value as? [String: Any] ?? [:]
-                
-                let sensorObject = Sensor(dictionary: sensorDictionary)
-                self.locations[3].sensors.append(sensorObject)
-                self.isBusy = false
-            }
-        }
+        })
     }
 }
 

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var sensorsViewModel: SensorsViewModel
+    
     var body: some View {
         
         if sensorsViewModel.isBusy {
@@ -17,6 +18,12 @@ struct ContentView: View {
                 .scaleEffect(x: 2, y: 2, anchor: .center)
         } else {
             ScrollView{
+                NavigationLink(
+                    destination: LocationView().environmentObject(sensorsViewModel),
+                    isActive: self.$sensorsViewModel.showLocationView,
+                    label: {})
+                    .buttonStyle(PlainButtonStyle())
+                
                 VStack{
                     Image(systemName: "house.fill")
                         .font(.title)
@@ -33,17 +40,21 @@ struct ContentView: View {
                     .padding()
                 
                 ForEach(sensorsViewModel.locations) { location in
-                    NavigationLink(
-                        destination: LocationView(location: location),
-                        label: {
-                            Text(location.name)
-                                .foregroundColor(.white)
-                                .padding()
-                                .frame(width:  WKInterfaceDevice.current().screenBounds.width*0.9)
-                                .background(Color.blue)
-                                .clipShape(Capsule())
-                        })
+                    Button(action: {
+                        self.sensorsViewModel.selectedLocation = location
+                        self.sensorsViewModel.showLocationView = true
+                        
+                    }, label: {
+                        Text(location.name)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width:  WKInterfaceDevice.current().screenBounds.width*0.95)
+                            .background(Color.blue)
+                            .clipShape(Capsule())
+                            
+                    })
                         .buttonStyle(PlainButtonStyle())
+                    
                 }
                 .padding(.horizontal)
             }
@@ -54,6 +65,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(SensorsViewModel())
+            .environmentObject(SensorsViewModel.shared)
     }
 }

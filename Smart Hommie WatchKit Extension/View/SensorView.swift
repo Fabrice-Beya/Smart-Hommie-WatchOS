@@ -1,5 +1,5 @@
 //
-//  Sensor.swift
+//  self.sensorsViewModel.selectedSensor.swift
 //  Smart Hommie WatchKit Extension
 //
 //  Created by Fabrice Beya on 2021/05/03.
@@ -9,33 +9,32 @@ import SwiftUI
 
 struct SensorView: View {
     @EnvironmentObject var sensorsViewModel: SensorsViewModel
-    @State var sensor: Sensor
     
     var body: some View {
         VStack{
             HStack{
-                Image(systemName: sensor.type == "Temperature" ? "thermometer" : sensor.type == "Humidity" ? "drop.fill" : "")
+                Image(systemName: self.sensorsViewModel.selectedSensor.type == "Temperature" ? "thermometer" : self.sensorsViewModel.selectedSensor.type == "Humidity" ? "drop.fill" : "")
                     .font(.headline)
-                    .foregroundColor(sensor.type == "Temperature" ? .red : sensor.type == "Humidity" ? .blue : .gray)
+                    .foregroundColor(self.sensorsViewModel.selectedSensor.type == "Temperature" ? .red : self.sensorsViewModel.selectedSensor.type == "Humidity" ? .blue : .gray)
                 
-                Text(sensor.location)
+                Text(self.sensorsViewModel.selectedSensor.location)
                     .font(.headline)
             }
             
             Spacer()
             
-            if sensor.type == "Temperature" {
-                Text(sensor.value +  " °C" )
+            if self.sensorsViewModel.selectedSensor.type == "Temperature" {
+                Text(self.sensorsViewModel.selectedSensor.value +  " °C" )
                     .font(.system(size: 58, weight: .light))
             }
-            else if sensor.type == "Humidity" {
-                Text(sensor.value +  " %" )
+            else if self.sensorsViewModel.selectedSensor.type == "Humidity" {
+                Text(self.sensorsViewModel.selectedSensor.value +  " %" )
                     .font(.system(size: 58, weight: .bold))
             }
             
             Spacer()
             
-            Text(sensor.name)
+            Text(self.sensorsViewModel.selectedSensor.name)
                 .font(.subheadline)
             
         }
@@ -44,6 +43,6 @@ struct SensorView: View {
 
 struct SensorView_Previews: PreviewProvider {
     static var previews: some View {
-        SensorView(sensor: MokeLocations[0].sensors[0])
+        SensorView().environmentObject(SensorsViewModel.shared)
     }
 }

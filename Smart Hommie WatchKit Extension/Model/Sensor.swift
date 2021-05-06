@@ -8,13 +8,22 @@
 import SwiftUI
 import Firebase
 
-struct Sensor: Identifiable {
+struct Sensor: Identifiable, Hashable {
     var id: String = UUID().uuidString
     var name: String = ""
     var deviceuid: String = ""
     var type: String = ""
     var value: String = ""
     var location: String = ""
+    
+    init(){}
+    
+    init(name: String, type: String, value: String, location: String){
+        self.name = name
+        self.type = type
+        self.value = value
+        self.location = location
+    }
     
     init(dictionary: [String: Any]){
         self.id = dictionary["id"] as? String ?? UUID().uuidString
@@ -26,10 +35,7 @@ struct Sensor: Identifiable {
         self.location = dictionary["location"] as? String ?? ""
     }
     
-    init(name: String, type: String, value: String, location: String){
-        self.name = name
-        self.type = type
-        self.value = value
-        self.location = location
+    static func == (lhs: Sensor, rhs: Sensor) -> Bool {
+        lhs.name + lhs.deviceuid == rhs.name + rhs.deviceuid
     }
 }
